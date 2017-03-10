@@ -19,7 +19,7 @@ html{
 .masorny{
     width:1200px;
     background-color: red;
-    background: #eee;
+    background: yellow;
     position:relative;
     margin:auto;
     display:block;
@@ -116,7 +116,6 @@ html{
 var gapTop = 16;
 function masorny_init(column_count){
     var column_count = column_count;
-
     $column = $(".masorny").find('.column');
     $len = $column.length;
 
@@ -159,13 +158,13 @@ function masorny_init(column_count){
         // console.log(heights[$j]);
         for($jj=0;$jj<$len/column_count;$jj++){
             // console.log($($column[$j*$jj+column_count]).height());
-            var idx = $j*$jj+(column_count*$jj);
+            // var idx = $j*$jj+(column_count*$jj);
+            var idx = $j+(column_count*$jj);
             heights[$j] +=  $($column[idx]).height();
             heights[$j] += gapTop;
-
         }
     }
-    var maxHeight =getMaxOfArray(heights);
+    var maxHeight = getMaxOfArray(heights);
     $(".masorny").css('height', maxHeight);
 
 };
@@ -220,9 +219,6 @@ function getLeft(idx, column_count) {
     }
     return left;
 }
-
-masorny_init();
-
 
 </script>
 </body>
