@@ -1,5 +1,5 @@
 {
-  "name": "masorny",
+  "name": "masonry",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leejinseok/masorny.git"
+    "url": "git+https://github.com/leejinseok/masonry.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leejinseok/masorny/issues"
+    "url": "https://github.com/leejinseok/masonry/issues"
   },
-  "homepage": "https://github.com/leejinseok/masorny#readme",
+  "homepage": "https://github.com/leejinseok/masonry#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",

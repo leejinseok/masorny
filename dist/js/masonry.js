@@ -1,7 +1,6 @@
 var gapTop = 16;
 
-function masorny_init(selector, column_count){
-
+function masonry_init(selector, column_count){
     $column = $(selector).find('.column');
     $len = $column.length;
 
@@ -51,8 +50,7 @@ function masorny_init(selector, column_count){
         }
     }
     var maxHeight = getMaxOfArray(heights);
-    $(selector).css('height', maxHeight);
-
+    $(selector).css('height', maxHeight).css('visibility','visible');
 }
 
 function getMaxOfArray(numArray) {
@@ -88,13 +86,13 @@ var MANSORNY = {
         window.addEventListener('load', function(){
             var innerWidth = $(window).width();
             if(innerWidth < 445){
-                masorny_init(selector, 1);
+                masonry_init(selector, 1);
             }
             else if(innerWidth < 800){
-                masorny_init(selector, 2);
+                masonry_init(selector, 2);
             }
             else if(innerWidth > 800){
-                masorny_init(selector, 4);
+                masonry_init(selector, 4);
             }
         });
 
@@ -102,14 +100,14 @@ var MANSORNY = {
         window.addEventListener('resize', function(evt){
             var innerWidth = evt.target.innerWidth;
             if(innerWidth < 445){
-                masorny_init(selector, 1);
+                masonry_init(selector, 1);
             }
             else if(innerWidth < 800){
-                // masorny_resize();
-                masorny_init(selector, 2);
+                // masonry_resize();
+                masonry_init(selector, 2);
             }
             else if(innerWidth > 800){
-                masorny_init(selector, 4);
+                masonry_init(selector, 4);
             }
         });
     }
